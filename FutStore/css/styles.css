@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 
 
 :root {
     --primary-color: #25576e; /* Yellow for primary elements */
-    --background-color: #0e1115; /* Light brown background */
-    --text-color: #f9f9f9; /* Dark text color */
+    --background-color: #d7dee8; /* Light brown background */
+    --text-color: #3d7598; /* Dark text color */
     --produto-background-color: #25576e; /* Light blue for project backgrounds */
     --button-background-color: #fff; /* White button color for light mode */
-    --button-text-color: #175acf; /* Dark text color for light mode */
+    --button-text-color: #179bcf; /* Dark text color for light mode */
 }
 
 body {
     font-family: Century Gothic;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 2.6;
     color: var(--text-color);
     background-color: var(--background-color);
 }

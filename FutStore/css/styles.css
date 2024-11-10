@@ -1,38 +1,38 @@
-
-
-
-:root {
-    --primary-color: #25576e; /* Yellow for primary elements */
-    --background-color: #d7dee8; /* Light brown background */
-    --text-color: #3d7598; /* Dark text color */
-    --produto-background-color: #25576e; /* Light blue for project backgrounds */
-    --button-background-color: #fff; /* White button color for light mode */
-    --button-text-color: #179bcf; /* Dark text color for light mode */
+:root { 
+    --primary-color: hsl(199, 50%, 29%);
+    --secondary-color: hsl(199, 50%, 50%);
+    --background-color: #ffffff;
+    --text-color: #3d7598;
+    --produto-background-color: #ffffff;
+    --button-background-color: #fff;
+    --button-text-color: #146787;
 }
 
 body {
-    font-family: Century Gothic;
+    font-family: 'Century Gothic', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 2.6;
+    line-height: 1.8;
     color: var(--text-color);
     background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
     background-color: var(--primary-color);
     color: #ffffff;
-    padding: 10px;
-    text-align: center; 
+    padding: 20px;
+    text-align: center;
     position: relative;
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 30px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    margin-top: 7px; /* Add margin to move the header down */
+    margin: 15px 10px;
+    font-size: 1.2em;
 }
 
 header:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -46,11 +46,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    transition: border-bottom 0.3s;
     position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fafafa;
 }
 
 nav ul li a::after {
@@ -58,7 +62,7 @@ nav ul li a::after {
     display: block;
     width: 0;
     height: 2px;
-    background: #fff;
+    background: #e68900;
     transition: width 0.3s;
     position: absolute;
     bottom: -2px;
@@ -69,117 +73,137 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-#banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
 section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-}
-
-.categorias {
-    margin: 20px 0;
-    text-align: center;
+    transition: padding 0.3s;
 }
 
 .categoria {
     background-color: var(--primary-color);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
 }
 
 .categoria:hover {
     background-color: #e68900;
     transform: translateY(-3px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .projetos-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
+    padding-top: 20px;
 }
 
 .projeto {
-    margin: 10px;
+    width: 280px;
     padding: 20px;
-    width: 250px;
-    background-color: var(--project-background-color);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55); /* Sombra leve */
+    background-color: var(--produto-background-color);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     position: relative;
     overflow: hidden;
-    transform: translateY(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
+    transform: translateY(15px);
     animation: fadeInUp 0.5s forwards;
     animation-delay: calc(var(--i) * 0.1s);
 }
 
 .projeto:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.projeto::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.projeto img {
     width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    border: 2px solid transparent;
-    box-sizing: border-box;
-    transition: border-color 0.4s ease;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.projeto:hover::before {
-    border-color: var(--highlight-color, rgb(161, 161, 161)); /* Borda laranja */
-    animation: borderExplosion 1s ease forwards;
+.projeto h3 {
+    font-size: 1.4em;
+    color:#146787;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
 }
 
-/* Efeito de explosão da borda */
-@keyframes borderExplosion {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); /* Começo da explosão */
-    }
-    50% {
-        box-shadow: 0 0 10px 10px rgba(190, 190, 190, 0.2); /* Expansão */
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 165, 0, 0); /* Retorno */
-    }
+.projeto p {
+    color: #146787;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.projeto::after {
-    content: '';
+.projeto button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.projeto button:hover {
+    background-color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.theme-icon {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 70%);
-    transform: scale(0);
-    transition: transform 0.5s ease;
-    border-radius: 50%;
-    opacity: 0;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
 }
 
-.projeto:hover::after {
-    transform: scale(1.3); /* Brilho suave */
-    opacity: 1;
+.theme-icon:hover {
+    color: #f0f0f0;
+}
+
+.contato-button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.contato-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fadeInUp {
@@ -192,108 +216,3 @@ section {
         transform: translateY(0);
     }
 }
-
-footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Tema escuro */
-body.dark-mode {
-    --background-color: #2B2B2B; /* Dark gray background */
-    --text-color: #FFFFFF; /* White text color */
-    --project-background-color: #2B2B2B; /* Dark gray for project backgrounds */
-    --button-background-color: #2B2B2B; /* Dark gray button background */
-    --button-text-color: #FFFFFF; /* White button text color */
-    --primary-color: #25D162; /* Green for primary elements */
-}
-
-.theme-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.theme-icon:hover {
-    color: var(--primary-color);
-}
-
-.projeto img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.contato-button {
-    position: relative;
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 15px 30px;
-    margin: 20px 0;
-    cursor: pointer;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    overflow: hidden;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.contato-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    box-sizing: border-box;
-    border: 2px solid var(--primary-color);
-    transform: scale(1);
-    opacity: 1;
-    animation: pulseBorder 2s infinite;
-}
-
-@keyframes pulseBorder {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.0;
-    }
-}
-
-@keyframes blinkEffect {
-    0%, 100% {
-        background-color: var(--button-background-color);
-    }
-    50% {
-        background-color: var(--button-background-color-hover);
-    }
-}
-
-.contato-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    animation: blinkEffect 1.5s infinite;
-}
-                                         
-            

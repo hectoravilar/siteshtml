@@ -8,6 +8,120 @@
     --button-text-color: #146787;
 }
 
+/* Estilo do ícone de carrinho fixo no canto superior direito */
+.cart-icon {
+    position: fixed;
+    top: 30px;    /* Distância do topo da tela */
+    right: 25px;  /* Distância da borda direita */
+    font-size: 24px; /* Tamanho do ícone */
+    color: #fdfdfd; /* Cor do ícone */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+    z-index: 1000; /* Garante que o ícone fique sobre outros elementos */
+}
+
+.cart-icon:hover {
+    color:#e68900;/* Cor do ícone quando passa o mouse */
+}
+
+.cart-icon i {
+    margin: 0; /* Remove margens extras */
+}
+
+/* Animação quando o ícone é clicado (opcional) */
+.cart-icon:active {
+    transform: scale(0.95); /* Efeito de "pressionamento" */
+}
+
+
+/* Estilos gerais para o formulário */
+#cadastro {
+    width: 70%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #ffffff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 27px;
+    color: hsl(199, 50%, 29%);
+    margin-bottom: 30px;
+}
+
+/* Estilo para os rótulos */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilo para os inputs */
+input[type="text"], input[type="email"] {
+    width: 70%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: 146787;
+    outline: none;
+}
+
+/* Estilo para o botão */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #146787;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4e8ba3;
+}
+
+/* Estilo para a mensagem de erro */
+#erro-cadastro {
+    text-align: center;
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
+
+
+#filtro-produtos {
+    width: 20%; /* Tamanho completo do campo */
+    padding: 7px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 2px solid #ffffff; /* Cor e espessura da borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    outline: none; /* Remove a borda de foco padrão */
+    background-color: #f9f9f9; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    transition: border-color 0.3s; /* Transição suave ao mudar a cor da borda */
+}
+
+/* Quando o campo está em foco */
+#filtro-produtos:focus {
+    border-color: #ffffff; /* Cor da borda ao focar */
+    background-color: #ffffff; /* Cor de fundo ao focar */
+}
+
+/* Estilos gerais do body */
 body {
     font-family: 'Century Gothic', sans-serif;
     margin: 0;
@@ -18,6 +132,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Estilos do cabeçalho */
 header {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -35,6 +150,7 @@ header:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos do menu de navegação */
 nav ul {
     list-style: none;
     padding: 0;
@@ -73,12 +189,14 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Estilos da seção */
 section {
     padding: 60px 20px;
     text-align: center;
     transition: padding 0.3s;
 }
 
+/* Estilos dos botões de categoria */
 .categoria {
     background-color: var(--primary-color);
     color: #fff;
@@ -97,6 +215,7 @@ section {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para os projetos */
 .projetos-container {
     display: flex;
     justify-content: center;
@@ -164,6 +283,7 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Estilos do rodapé */
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -173,6 +293,36 @@ footer {
     margin-top: 30px;
 }
 
+/* Estilos do ícone de carrinho */
+#icone-carrinho-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#icone-carrinho-btn i {
+    font-size: 24px;
+    color: #fffefe;
+    transition: color 0.3s;
+}
+
+#icone-carrinho-btn:hover i {
+    color: #a8aeb7;
+}
+
+#quantidade-carrinho {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(241, 241, 241);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: px;
+}
+
+/* Estilos do ícone de tema */
 .theme-icon {
     position: absolute;
     top: 25px;
@@ -187,6 +337,7 @@ footer {
     color: #f0f0f0;
 }
 
+/* Estilos do botão de contato */
 .contato-button {
     background-color: var(--button-background-color);
     color: var(--button-text-color);
@@ -206,6 +357,7 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Animação de fade-in para projetos */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -215,4 +367,5 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+    
 }

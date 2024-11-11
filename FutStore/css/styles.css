@@ -9,7 +9,7 @@
 }
 
 /* Estilo do ícone de carrinho fixo no canto superior direito */
-.cart-icon {
+.icone-carrinho{
     position: fixed;
     top: 30px;    /* Distância do topo da tela */
     right: 25px;  /* Distância da borda direita */
@@ -20,16 +20,16 @@
     z-index: 1000; /* Garante que o ícone fique sobre outros elementos */
 }
 
-.cart-icon:hover {
+.icone-carrinho:hover {
     color:#e68900;/* Cor do ícone quando passa o mouse */
 }
 
-.cart-icon i {
+.icone-carrinho i {
     margin: 0; /* Remove margens extras */
 }
 
 /* Animação quando o ícone é clicado (opcional) */
-.cart-icon:active {
+.icone-carrinho:active {
     transform: scale(0.95); /* Efeito de "pressionamento" */
 }
 
@@ -215,8 +215,8 @@ section {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para os projetos */
-.projetos-container {
+/* Estilos para os produtoss */
+.produtos-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -224,7 +224,7 @@ section {
     padding-top: 20px;
 }
 
-.projeto {
+.produtos {
     width: 280px;
     padding: 20px;
     background-color: var(--produto-background-color);
@@ -239,33 +239,33 @@ section {
     animation-delay: calc(var(--i) * 0.1s);
 }
 
-.projeto:hover {
+.produtos:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.projeto img {
+.produtos img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.projeto h3 {
+.produtos h3 {
     font-size: 1.4em;
     color:#146787;
     margin-bottom: 8px;
     transition: color 0.3s ease;
 }
 
-.projeto p {
+.produtos p {
     color: #146787;
     font-size: 0.95em;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.projeto button {
+.produtos button {
     background-color: var(--button-background-color);
     color: var(--button-text-color);
     padding: 12px 20px;
@@ -277,13 +277,13 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.projeto button:hover {
+.produtos button:hover {
     background-color: #ffffff;
     transform: translateY(-1px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Estilos do rodapé */
+/* Estilos do footer =  parte de baixo do site  */
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -291,35 +291,6 @@ footer {
     padding: 25px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
-}
-
-/* Estilos do ícone de carrinho */
-#icone-carrinho-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-}
-
-#icone-carrinho-btn i {
-    font-size: 24px;
-    color: #fffefe;
-    transition: color 0.3s;
-}
-
-#icone-carrinho-btn:hover i {
-    color: #a8aeb7;
-}
-
-#quantidade-carrinho {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(241, 241, 241);
-    border-radius: 50%;
-    padding: 5px;
-    font-size: px;
 }
 
 /* Estilos do ícone de tema */
@@ -357,7 +328,7 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Animação de fade-in para projetos */
+/* Animação de fade-in para produtoss */
 @keyframes fadeInUp {
     from {
         opacity: 0;

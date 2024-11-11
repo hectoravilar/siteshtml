@@ -10,37 +10,27 @@
     
 </head>
 <!-- Ícone de carrinho fixo na página -->
-<a href="#" class="cart-icon">
+<a href="#" class="icone-carrinho">
     <i class="fas fa-shopping-cart"></i> <!-- Ícone de carrinho -->
 </a>
 
 <body>
     <header>
         <h1>CloudStore</h1>
-        <!-- Campo de Busca -->
+  <!-- incluindo Barra de pesquisa  -->     
 <input type="text" id="filtro-produtos" placeholder="Buscar produto...">
 
-<script>
-    document.getElementById('filtro-produtos').addEventListener('input', function() {
-        const filtro = this.value.toLowerCase();
-        document.querySelectorAll('.projeto').forEach(produto => {
-            const nomeProduto = produto.querySelector('h3').textContent.toLowerCase();
-            produto.style.display = nomeProduto.includes(filtro) ? 'block' : 'none';
-        });
-    });
-</script>
-
         <nav>
-            <ul>
+            <ul> <!-- adicionando mais detalhes no site  -->
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         
-        
     </header>
 
+<!-- adicionando informações de ofertas e descontos-->
     <section id="sobre">
         <h2>Ofertas imperdíveis</h2>
         <p>Use o cupom CLOUD10 na primeira compra para desconto de 10%.</p>
@@ -48,153 +38,136 @@
 
     <section id="produtos">
         <h2>Nossos produtos</h2>
-        <div class="projetos-container">
-            <!-- Exemplo de projeto com imagem -->
-            <div class="projeto" data-category="web">
-                <img src="imgdosite/eafc25.jpg" alt="EA Sports FC 25 - Playstation 5" style="width: 130px; height: auto;">
+        <div class="produtos-container">
+
+            
+            <div class="produtos" data-category="web">                <!-- usando style para mudar o tamanho e altura--> 
+                <img src="imgdosite/eafc25.jpg" alt="EA Sports FC 25 - Playstation 5" style="width: 130px; height: auto;"> <!--adicionando imagem ao produto usando o img src="" -->
                 <h3>EA Sports FC 25 - Playstation 5</h3>
-                <p>R$359,99</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <p>R$359,99</p><!-- incluindo preço dos produtos  --> 
+               
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button><!-- incluindo Botão usando "button"-->
                 
             </div>
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/volante.jpg" alt="Volante Logitech G923" style="width: 250px; height: auto;">
                 <h3>Volante Logitech G923 para PS5, PS4 e PC com Force Feedback TRUEFORCE</h3>
                 <p>R$2.405,50</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/nba.jpg" alt="NBA 2K24" style="width: 130px; height: auto;">
                 <h3>NBA 2K24 - PlayStation 5</h3>
-                <p>R$305,87</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <p>R$305,87</p> <!-- incluindo preço dos produtos  --> 
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
           
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/ps5limitado.jpg" alt="PS5 Edição Slim Digital" style="width: 130px; height: auto;">
                 <h3>PlayStation 5 Edição Slim Digital - Bundle edição limitada do 30º aniversário</h3>
                 <p>Indisponível</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
             
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/mouse.jpg" alt="Mouse Gamer Razer DeathAdder" style="width: 100px; height: auto;">
                 <h3>Mouse gamer Razer DeathAdder Essential, sensor óptico de 6400 DPI, Mercury White™</h3>
                 <p>R$133,80</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/controleastro.jpg" alt="DualSense Wireless Controller" style="width: 170px; height: auto;">
                 <h3>DualSense Wireless Controller - Astro Bot Limited Edition™</h3>
                 <p>R$1.419,00</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/ps5.jpg" alt="PlayStation DualSense Controle" style="width: 160px; height: auto;">
                 <h3>PlayStation DualSense Controle sem fio – Branco</h3>
                 <p>R$399,00</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
             
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">            
                 <img src="imgdosite/granturismo.jpg" alt="Gran Turismo 7" style="width: 130px; height: auto;">
                 <h3>Gran Turismo 7 Edição Padrão - PlayStation 5</h3>
                 <p>R$349,03</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/f1.jpg" alt="F1 24" style="width: 130px; height: auto;">
                 <h3>F1 24 - PlayStation 5</h3>
                 <p>R$339,89</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/thecrew.jpg" alt="The Crew: Motorfest" style="width: 130px; height: auto;">
                 <h3>The Crew: Motorfest - PlayStation 5</h3>
                 <p>R$350,00</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
             
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/dualpreto.webp" alt="Controle Dualsense Midnight Black" style="width: 160px; height: auto;">
                 <h3>Controle DualSense Midnight Black Ps5 Cor Preto™</h3>
                 <p>R$449,90</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
             
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/ps5normal.jpg" alt="PlayStation 5 Standard Edition" style="width: 130px; height: auto;">
                 <h3>PlayStation®5 Standard Edition</h3>
                 <p>R$3.950,00</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/headset.jpg" alt="Headset sem fio PULSE 3D" style="width: 130px; height: auto;">
                 <h3>Headset sem fio PULSE 3D - PlayStation 5</h3>
                 <p>R$510,57</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
-            <div class="projeto" data-category="web">
+            <div class="produtos" data-category="web">
                 <img src="imgdosite/astroheadset.jpg" alt="Headset ASTRO Gaming A50" style="width: 130px; height: auto;">
                 <h3>Headset Sem Fio ASTRO Gaming A50 + Base Station Gen 4</h3>
                 <p>R$1.699,99</p>
-                <button class="add-to-cart">Adicionar ao carrinho</button>
+                <button class="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
         </div>
     </section>
-
+ <!-- adcionando "contato" no site, section id-->
     <section id="contato">
         <h2>Contato</h2>
         <a href="https://example.com/contact" class="contato-button">
             <i class="fas fa-envelope"></i>
         </a>
     </section>
-
+<!-- incluindo cadastro no site -->
     <section id="cadastro">
         <h2>Cadastro</h2>
         <form id="form-cadastro">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" required><!-- pedindo ao usuario inserir o seu nome"-->
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Cadastrar</button>
+            <input type="email" id="email" name="email" required><!-- pedindo ao usuario inserir o seu email"-->
+            <button type="submit">Cadastrar</button><!-- incluindo Botão "cadastrar"-->
         </form>
+        <!-- inserindo mensagem de erro, caso o usuario não tenha inserido todos os campos pedidos-->
         <p id="erro-cadastro" style="color: red; display: none;">Por favor, preencha todos os campos.</p>
     </section>
 
     <footer>
         <p>© 2024 CloudStore</p>
     </footer>
-
-    <script>
-        document.getElementById('form-cadastro').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value.trim();
-            const email = document.getElementById('email').value.trim();
-
-            if (!nome || !email) {
-                document.getElementById('erro-cadastro').style.display = 'block';
-            } else {
-                document.getElementById('erro-cadastro').style.display = 'none';
-                alert('Cadastro realizado com sucesso!');
-            }
-        });
-
-        // Lógica para alternar tema
-        document.getElementById('toggle-theme').addEventListener('click', function() {
-            document.body.classList.toggle('dark-theme');
-        });
-    </script>
 </body>
 </html>

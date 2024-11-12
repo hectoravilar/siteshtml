@@ -16,10 +16,6 @@
 
 <body>
     <header>
-        <h1>CloudStore</h1>
-  <!-- incluindo Barra de pesquisa  -->     
-<input type="text" id="filtro-produtos" placeholder="Buscar produto...">
-
         <nav>
             <ul> <!-- adicionando mais detalhes no site  -->
                 <li><a href="#sobre">Sobre</a></li>
@@ -27,17 +23,26 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+                 <!-- incluindo Logo do site -->
+        <img src="imgdosite/CloudStore.v2.PNG" alt="Descrição da imagem" class="logo-CloudStore">
+         <!-- incluindo Barra de pesquisa  -->
+        <input type="text" id="Buscar-produtos" placeholder="Buscar produtos...">
+    
+
+
+        
         
     </header>
 
 <!-- adicionando informações de ofertas e descontos-->
     <section id="sobre">
-        <h2>Ofertas imperdíveis</h2>
-        <p>Use o cupom CLOUD10 na primeira compra para desconto de 10%.</p>
+        <h2>Ofertas imperdíveis!</h2>
+        <p>Use o cupom CLOUD10 para desconto de 10% na primeira compra!.</p>
+        <p>Frete gratis Disponivel para Santa Catarina!!</p>
     </section>
 
     <section id="produtos">
-        <h2>Nossos produtos</h2>
+        <h2>Veja nossos produtos!</h2>
         <div class="produtos-container">
 
             
@@ -146,12 +151,7 @@
         </div>
     </section>
  <!-- adcionando "contato" no site, section id-->
-    <section id="contato">
-        <h2>Contato</h2>
-        <a href="https://example.com/contact" class="contato-button">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </section>
+    
 <!-- incluindo cadastro no site -->
     <section id="cadastro">
         <h2>Cadastro</h2>
@@ -165,9 +165,16 @@
         <!-- inserindo mensagem de erro, caso o usuario não tenha inserido todos os campos pedidos-->
         <p id="erro-cadastro" style="color: red; display: none;">Por favor, preencha todos os campos.</p>
     </section>
+<!-- adcionando "contato" no site, section id-->
+    <section id="contato">
+        <h2>Contato</h2>
+        <a href="https://example.com/contact" class="botão-contato">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </section>
 
     <footer>
-        <p>© 2024 CloudStore</p>
+        <p>© 2024 CloudStore - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>

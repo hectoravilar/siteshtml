@@ -1,27 +1,92 @@
 :root { 
-    --primary-color: hsl(199, 50%, 29%);
-    --secondary-color: hsl(199, 50%, 50%);
-    --background-color: #ffffff;
-    --text-color: #3d7598;
-    --produto-background-color: #ffffff;
-    --button-background-color: #fff;
-    --button-text-color: #146787;
+    --primary-color:#67acd7;
+    --background-color: #ffffff; /* Cor de fundo do site*/
+    --text-color: #104e67;  /* cor das letras no parágrafo  */
+    --produto-background-color: #ffffff;  /* Cor de fundo do Produtos*/
+    --button-text-color: #104e67;
+}
+
+/* Estilos do menu de navegação SOBRE, CONTATO e PRODUTOS */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin:  0 20px 20px;
+    
+}
+
+nav ul li a {
+    color: #f4fcff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+#Buscar-produtos {
+    width: 20%; /* Tamanho completo do campo */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 2px solid #ffffff; /* Cor e espessura da borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    outline: none; /* Remove a borda de foco padrão */
+    background-color: #f9f9f9; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    transition: border-color 0.3s; /* Transição suave ao mudar a cor da borda */
+    margin-top: -10px;
+}
+
+/* Quando o campo está em foco */
+#Buscar-produtos:focus {
+    border-color: #146787; /* Cor da borda ao focar */
+    background-color: #ffffff; /* Cor de fundo ao focar */
+}
+.logo-CloudStore {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: block; /* Garante que o elemento use o margin auto */
 }
 
 /* Estilo do ícone de carrinho fixo no canto superior direito */
 .icone-carrinho{
     position: fixed;
-    top: 30px;    /* Distância do topo da tela */
-    right: 25px;  /* Distância da borda direita */
-    font-size: 24px; /* Tamanho do ícone */
-    color: #fdfdfd; /* Cor do ícone */
+    top: 35px;    /* Distância do topo da tela */
+    right: 1000px;  /* Distância da borda direita */
+    left: 30px;
+    font-size: 20px; /* Tamanho do ícone */
+    color: #ffffff;; /* Cor do ícone */
     cursor: pointer;
     transition: color 0.3s ease; /* Transição suave para a mudança de cor */
     z-index: 1000; /* Garante que o ícone fique sobre outros elementos */
 }
 
 .icone-carrinho:hover {
-    color:#e68900;/* Cor do ícone quando passa o mouse */
+    color:#3d7598;     /* Cor do ícone quando passa o mouse */
 }
 
 .icone-carrinho i {
@@ -34,31 +99,22 @@
 }
 
 
-/* Estilos gerais para o formulário */
-#cadastro {
-    width: 70%;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px #ffffff;
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #146787;
+    margin-bottom: 30px;
+
 }
 
 h2 {
     text-align: center;
     font-size: 27px;
-    color: hsl(199, 50%, 29%);
+    color: #146787;
     margin-bottom: 30px;
 }
 
-/* Estilo para os rótulos */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #555;
-}
 
 /* Estilo para os inputs */
 input[type="text"], input[type="email"] {
@@ -94,32 +150,6 @@ button[type="submit"]:hover {
     background-color: #4e8ba3;
 }
 
-/* Estilo para a mensagem de erro */
-#erro-cadastro {
-    text-align: center;
-    font-size: 14px;
-    color: red;
-    margin-top: 10px;
-}
-
-
-#filtro-produtos {
-    width: 20%; /* Tamanho completo do campo */
-    padding: 7px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border: 2px solid #ffffff; /* Cor e espessura da borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    outline: none; /* Remove a borda de foco padrão */
-    background-color: #f9f9f9; /* Cor de fundo */
-    color: #333; /* Cor do texto */
-    transition: border-color 0.3s; /* Transição suave ao mudar a cor da borda */
-}
-
-/* Quando o campo está em foco */
-#filtro-produtos:focus {
-    border-color: #ffffff; /* Cor da borda ao focar */
-    background-color: #ffffff; /* Cor de fundo ao focar */
-}
 
 /* Estilos gerais do body */
 body {
@@ -134,7 +164,7 @@ body {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); 
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -150,44 +180,7 @@ header:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos do menu de navegação */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #fafafa;
-}
-
-nav ul li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #e68900;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
 
 /* Estilos da seção */
 section {
@@ -196,40 +189,24 @@ section {
     transition: padding 0.3s;
 }
 
-/* Estilos dos botões de categoria */
-.categoria {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-}
 
-.categoria:hover {
-    background-color: #e68900;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
+
 
 /* Estilos para os produtoss */
 .produtos-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 45px;
     padding-top: 20px;
 }
 
 .produtos {
-    width: 280px;
+    width: 200px;
     padding: 20px;
     background-color: var(--produto-background-color);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 70px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -240,8 +217,8 @@ section {
 }
 
 .produtos:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 3px 3px 1px#146787;
 }
 
 .produtos img {
@@ -266,50 +243,49 @@ section {
 }
 
 .produtos button {
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
+    font-family: 'Century Gothic', sans-serif;
+    background-color:#eaecf3; /* cor principal de fundodo botao adic. ao carrinho*/
+    color: #146787;
     padding: 12px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .produtos button:hover {
-    background-color: #ffffff;
+    background-color: #e6eaf3;
     transform: translateY(-1px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 4px 0px #146787;
 }
 
-/* Estilos do footer =  parte de baixo do site  */
+/* Estilos do footer = parte de baixo do site  */
 footer {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color:  #146787;
+    color:  #f4fcff;
     text-align: center;
-    padding: 25px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    box-shadow: 0 -10px 1px rgb(255, 255, 255);
     margin-top: 30px;
+    border-radius: 20px;
 }
 
-/* Estilos do ícone de tema */
-.theme-icon {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #fff;
-    transition: color 0.3s;
+footer:hover {
+    background-color:  #146787;
+    color:  #f4fcff;
+    text-align: center;
+    padding: 6px;
+    box-shadow: 0 -10px 1px rgb(255, 255, 255);
+    margin-top: 30px;
+    border-radius: 20px;
 }
 
-.theme-icon:hover {
-    color: #f0f0f0;
-}
+
 
 /* Estilos do botão de contato */
-.contato-button {
+.botão-contato {
     background-color: var(--button-background-color);
     color: var(--button-text-color);
     padding: 15px 30px;
@@ -318,14 +294,14 @@ footer {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 0px #b1d2df;
     position: relative;
     overflow: hidden;
 }
 
-.contato-button:hover {
+.botão-contato:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 0px #146787;
 }
 
 /* Animação de fade-in para produtoss */
@@ -340,3 +316,17 @@ footer {
     }
     
 }
+#cadastro {
+
+    width: 30%;
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 2 4px 8px #ffffff;
+   
+
+
+}
+    

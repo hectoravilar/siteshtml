@@ -48,23 +48,26 @@ nav ul li a:hover::after {
 
 
 #Buscar-produtos {
-    width: 20%; /* Tamanho completo do campo */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 15px; /* Tamanho da fonte */
-    border: 2px solid #ffffff; /* Cor e espessura da borda */
-    border-radius: 5px; /* Bordas arredondadas */
+    width: 100%; /* Expande a barra para preencher o espaço do contêiner */
+    max-width: 300px; /* Limita o tamanho máximo para uma aparência consistente */
+    padding: 12px; /* Ajusta o espaçamento interno para mais conforto */
+    font-size: 16px; /* Fonte ligeiramente maior */
+    border: 2px solid #f5f1f1; /* Cor da borda inicial */
+    border-radius: 25px; /* Bordas arredondadas mais suaves */
     outline: none; /* Remove a borda de foco padrão */
-    background-color: #f9f9f9; /* Cor de fundo */
-    color: #333; /* Cor do texto */
-    transition: border-color 0.3s; /* Transição suave ao mudar a cor da borda */
-    margin-top: -10px;
+    background-color: #ffffff;  /* Fundo escuro para combinar com o estilo moderno */
+    color: #104e67; ; /* Cor do texto para contraste */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição para borda e sombra */
+    margin-top: -10px; /* Alinha melhor com o layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    font-family: 'Century Gothic', sans-serif;
 }
 
-/* Quando o campo está em foco */
 #Buscar-produtos:focus {
-    border-color: #146787; /* Cor da borda ao focar */
-    background-color: #ffffff; /* Cor de fundo ao focar */
+    border-color: #104e67;  /* Cor de destaque no foco */
+    box-shadow: 2px 2px 0px #0b394b; ; /* Sombra mais intensa no foco */
 }
+
 .logo-CloudStore {
     width: 400px;
     height: 400px;

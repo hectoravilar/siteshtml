@@ -59,21 +59,21 @@ nav ul li a:hover::after {
     width: 100%; /* Expande a barra para preencher o espaço do contêiner */
     max-width: 300px; /* Limita o tamanho máximo para uma aparência consistente */
     padding: 12px; /* Ajusta o espaçamento interno para mais conforto */
-    font-size: 16px; /* Fonte ligeiramente maior */
+    font-size: 16px; /*  Tamanho da Fonte */
     border: 2px solid #f5f1f1; /* Cor da borda inicial */
     border-radius: 25px; /* Bordas arredondadas mais suaves */
     outline: none; /* Remove a borda de foco padrão */
-    background-color: #ffffff;  /* Fundo escuro para combinar com o estilo moderno */
-    color: #104e67; ; /* Cor do texto para contraste */
+    background-color: #ffffff;  /* cor de fundo */
+    color: #146787;   /* Cor do texto para contraste */
     transition: border-color 0.3s, box-shadow 0.3s; /* Transição para borda e sombra */
     margin-top: -10px; /* Alinha melhor com o layout */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    box-shadow: 0 2px 0px #a5e0f5;; /* Sombra  */
     font-family: 'Century Gothic', sans-serif;
 }
 
 #Buscar-produtos:focus {
-    border-color: #104e67;  /* Cor de destaque no foco */
-    box-shadow: 2px 2 px 0px #0b394b; ; /* Sombra mais intensa no foco */
+    border-color: #95dcf8;  /* Cor de destaque no foco */
+    box-shadow: 1px 1px 0px #abe4fa; /* Sombra um pouco mais intensa no foco para contraste */
 }
 
 .logo-CloudStore {
@@ -204,21 +204,22 @@ p {
 }
 .produtos button {
     font-family: 'Century Gothic', sans-serif;
-    background-color:#eaecf3; /* cor principal de fundodo botao adic. ao carrinho*/
-    color: #146787;
-    padding: 12px 20px;
+    background-color:#67acd7; /* cor principal de fundodo botao adic. ao carrinho*/
+    color: #ffffff;
+    padding: 10px 20px;
     border: none;
     border-radius: 50px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 0px rgba(195, 222, 248, 0.993);
 }
 
 .produtos button:hover {
-    background-color: #e6eaf3;
+    background-color: #25e38e;
     transform: translateY(-1px);
-    box-shadow: 2px 4px 0px #146787;
+    box-shadow: 2px 4px 0px #bef9dc;
+    color: #ffffff;
 }
 
 
@@ -236,7 +237,7 @@ input[type="text"], input[type="email"] {
 }
 
 input[type="text"]:focus, input[type="email"]:focus {
-    border-color: #146787;
+    border-color: #67acd7;
     outline: none;
     font-family: 'Century Gothic', sans-serif;
 }
@@ -245,7 +246,7 @@ input[type="text"]:focus, input[type="email"]:focus {
 button[type="submit"] {
     width: 100%;
     padding: 14px;
-    background-color: #146787;
+    background-color: #67acd7;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 6px;
@@ -255,7 +256,9 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #4e8ba3;
+    background-color: #25e38e;
+    border: none;
+    
 }
 
 
@@ -301,7 +304,7 @@ body {
 
 .botão-contato:hover {
     transform: translateY(-4px);
-    box-shadow: 3px 3px 0px #146787
+    box-shadow: 3px 3px 0px #67acd7;
     
 }
 

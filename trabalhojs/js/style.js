@@ -1,57 +1,64 @@
 // Variáveis
-let visitCount = 0;
-let users = []; // Array para armazenar os usuários do formulário
+let contadorDeVisitas = 0; // Variável para contar o número de visitas
+let usuarios = []; // Array para armazenar os usuários do formulário
 
 // Função para atualizar o contador de visitas
-function updateVisitCount() {
-    visitCount++;
-    document.getElementById("visitCount").textContent = `Contador de Visitas: ${visitCount}`;
+function atualizarContadorDeVisitas() {
+    contadorDeVisitas++; // Incrementa o contador de visitas
+    document.getElementById("contadorDeVisitas").textContent = `Contador de Visitas: ${contadorDeVisitas}`;
+    // Atualiza o conteúdo do elemento com o ID "contadorDeVisitas" com o número atualizado de visitas
 }
 
 // Função para exibir mensagem com nome e idade
-function displayMessage(name, age) {
-    let message = document.getElementById("message");
-    if (age >= 18) { // Estrutura Condicional
-        message.textContent = `Olá, ${name}! Você é maior de idade.`;
+function exibirMensagem(nome, idade) {
+    let mensagem = document.getElementById("mensagem");
+    // Obtém o elemento com o ID "mensagem" para exibir a mensagem
+
+    // Verifica se o usuário é maior ou menor de idade
+    if (idade >= 18) { // Estrutura Condicional
+        mensagem.textContent = `Olá, ${nome}! Você é maior de idade.`;
     } else {
-        message.textContent = `Olá, ${name}! Você é menor de idade.`;
+        mensagem.textContent = `Olá, ${nome}! Você é menor de idade.`;
     }
 }
 
 // Função para adicionar usuário ao array e exibir o total de usuários cadastrados
-function addUser(name, age) {
-    users.push({ name, age }); // Tipo de dado: objeto
-    console.log(`Usuário ${name} adicionado! Total de usuários: ${users.length}`);
+function adicionarUsuario(nome, idade) {
+    usuarios.push({ nome, idade }); // Adiciona o usuário como objeto no array "usuarios"
+    console.log(`Usuário ${nome} adicionado! Total de usuários: ${usuarios.length}`);
+    // Exibe uma mensagem no console indicando o nome do usuário e o total de usuários
 }
 
 // Evento para o envio do formulário
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evitar o comportamento padrão do formulário
+document.getElementById("formularioContato").addEventListener("submit", function(evento) {
+    evento.preventDefault(); // Evita o comportamento padrão do formulário (recarregar a página)
 
-    let name = document.getElementById("name").value;
-    let age = parseInt(document.getElementById("age").value);
+    let nome = document.getElementById("nome").value; // Obtém o valor do campo "nome"
+    let idade = parseInt(document.getElementById("idade").value); // Converte o valor do campo "idade" para número inteiro
 
-    if (name && !isNaN(age)) { // Estrutura Condicional para validar os dados
-        addUser(name, age);
-        displayMessage(name, age);
+    // Verifica se o nome foi preenchido e se a idade é um número válido
+    if (nome && !isNaN(idade)) { // Estrutura Condicional para validar os dados
+        adicionarUsuario(nome, idade); // Chama a função para adicionar o usuário
+        exibirMensagem(nome, idade); // Chama a função para exibir a mensagem de maioridade
     } else {
-        alert("Preencha todos os campos corretamente!");
+        alert("Preencha todos os campos corretamente!"); // Alerta caso os dados estejam incorretos
     }
 });
 
-// Operações Matemáticas e Operações Lógicas
-function isPrime(num) {
-    if (num <= 1) return false;
-    for (let i = 2; i < num; i++) {
-        if (num % i === 0) return false;
+// Função para verificar se um número é primo
+function ehPrimo(numero) {
+    if (numero <= 1) return false; // Números menores ou iguais a 1 não são primos
+    for (let i = 2; i < numero; i++) { // Estrutura de repetição para verificar divisores
+        if (numero % i === 0) return false; // Se o número for divisível por i, não é primo
     }
-    return true;
+    return true; // Retorna true se o número for primo
 }
 
-// Usando Estrutura de Repetição para verificar números primos de 1 a 10
+// Estrutura de repetição para verificar números primos de 1 a 10
 for (let i = 1; i <= 10; i++) {
-    console.log(`O número ${i} é primo? ${isPrime(i)}`);
+    console.log(`O número ${i} é primo? ${ehPrimo(i)}`);
+    // Exibe no console se o número atual é primo ou não, chamando a função ehPrimo
 }
 
-// Executar a função de contador de visitas quando a página carrega
-document.addEventListener("DOMContentLoaded", updateVisitCount);
+// Executa a função de contador de visitas quando a página carrega
+document.addEventListener("DOMContentLoaded", atualizarContadorDeVisitas);

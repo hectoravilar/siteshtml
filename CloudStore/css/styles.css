@@ -1,4 +1,4 @@
-/* Estilos do cabeçalho / principal ponto do site */
+/* acabeçalho / ponto principal do site */
 header {
     background-color: #67acd7;
     padding: 20px;
@@ -14,7 +14,7 @@ header:hover {
     transform: translateY(-5px);
     box-shadow: 0 3px 0px rgb(13, 121, 171);
 }
-/* modificando "SOBRE, "PRODUTOS, CONTATOS*/
+/* modificando "SOBRE, "PRODUTOS, CONTATOS na parte de cima do site*/
 nav ul {
     list-style: none;
     padding: 0;
@@ -123,15 +123,9 @@ h2 {
     text-align: center;
     font-size: 27px;
     color: #146787;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
-h4 {
 
-    text-align: center;
-    font-size: 13px;
-    color: #11a449;
-    margin-bottom: 30px;
-}
 h5 {
 
     text-align: center;
@@ -146,12 +140,13 @@ h6 {
     text-align: center;
     font-size: 16px;
     color: #146787;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    padding: 2px;
 }
 p {
-    color: #146787; /* Cor do texto */
-   
+    color:#146787; ;
 }
+
 
  /* Estilos para os produtoss */
 .produtos-container {
@@ -163,7 +158,7 @@ p {
 }
 
 .produtos {
-    width: 200px;
+    width: 195px;
     padding: 30px;
     background-color: #ffffff;
     box-shadow: 3px 3px 0px rgba(20, 110, 152, 0.158);
@@ -185,23 +180,38 @@ p {
 .produtos img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    border-radius: 0px;
+    margin-bottom: 0px;
 }
 
 .produtos h3 {
-    font-size: 1.4em;
+    font-size: 1.0em;
     color:#146787;
     margin-bottom: 8px;
     transition: color 0.3s ease;
 }
+.produtos h4 {
+
+    text-align: center;
+    font-size: 13px;
+    color: #11a449;
+    margin-bottom: 0px;
+}
 
 .produtos p {
     color: #146787;
-    font-size: 0.95em;
+    font-size: 0.70em;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+
+    
 }
+
+.produtos h6 {
+    margin-top: 0px;
+    font-size: 1.00em;
+}
+
 .produtos button {
     font-family: 'Century Gothic', sans-serif;
     background-color:#67acd7; /* cor principal de fundodo botao adic. ao carrinho*/
@@ -304,7 +314,8 @@ body {
 
 .botão-contato:hover {
     transform: translateY(-4px);
-    box-shadow: 3px 3px 0px #67acd7;
+    box-shadow: 3px 3px 0px #25e38e;
+    color: #25e38e;
     
 }
 
@@ -325,6 +336,7 @@ section {
     box-shadow: 2 4px 8px #ffffff;
    
 }
+
 /* Estilos do footer = parte de baixo do site  */
 footer {
     background-color: #67acd7;

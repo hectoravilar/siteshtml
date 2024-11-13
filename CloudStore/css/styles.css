@@ -1,3 +1,96 @@
+/* Ajustando responsividade do site com celulares e tablets */
+
+/* Ajustes para telas menores, como tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        margin: 10px 5px;
+        font-size: 1em;
+    }
+
+    nav ul li {
+        display: block; /* Exibir links em bloco para facilitar leitura em telas menores */
+        margin: 10px 0;
+    }
+
+    .produtos-container {
+        gap: 8px;
+        padding-top: 5px;
+    }
+
+    .produtos {
+        width: 150px;
+        padding: 20px;
+        border-radius: 40px;
+    }
+
+    .logo-CloudStore {
+        width: 250px;
+        height: 250px;
+    }
+
+    .icone-carrinho {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Ajustes para dispositivos móveis, como celulares */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .produtos-container {
+        flex-direction: column; /* Organizar produtos em uma única coluna */
+        align-items: center;
+        gap: 12px;
+    }
+
+    .produtos {
+        width: 90%;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    #Buscar-produtos {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .icone-carrinho {
+        top: 15px;
+        right: 15px;
+    }
+
+    .logo-CloudStore {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1, h2, h5, h6 {
+        font-size: smaller;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    #cadastro {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+    }
+}
+
+
 /* acabeçalho / ponto principal do site */
 header {
     background-color: #67acd7;
